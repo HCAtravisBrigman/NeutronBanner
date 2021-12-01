@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0C96D62731A9C4007B490A /* Neutron in Frameworks */ = {isa = PBXBuildFile; productRef = FB0C96D52731A9C4007B490A /* Neutron */; };
 		FB577FFC27307AFC000B1938 /* NeutronBannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB577FFB27307AFC000B1938 /* NeutronBannerApp.swift */; };
 		FB577FFE27307AFC000B1938 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB577FFD27307AFC000B1938 /* ContentView.swift */; };
 		FB57800027307B10000B1938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB577FFF27307B10000B1938 /* Assets.xcassets */; };
 		FB57800327307B10000B1938 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB57800227307B10000B1938 /* Preview Assets.xcassets */; };
+		FB57800A2730844B000B1938 /* NeutronBannerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5780092730844B000B1938 /* NeutronBannerModifier.swift */; };
+		FB57800C273087A8000B1938 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB57800B273087A8000B1938 /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		FB577FFD27307AFC000B1938 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB577FFF27307B10000B1938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB57800227307B10000B1938 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB5780092730844B000B1938 /* NeutronBannerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeutronBannerModifier.swift; sourceTree = "<group>"; };
+		FB57800B273087A8000B1938 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB0C96D62731A9C4007B490A /* Neutron in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +59,8 @@
 			children = (
 				FB577FFB27307AFC000B1938 /* NeutronBannerApp.swift */,
 				FB577FFD27307AFC000B1938 /* ContentView.swift */,
+				FB5780092730844B000B1938 /* NeutronBannerModifier.swift */,
+				FB57800B273087A8000B1938 /* ViewExtension.swift */,
 				FB577FFF27307B10000B1938 /* Assets.xcassets */,
 				FB57800127307B10000B1938 /* Preview Content */,
 			);
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = NeutronBanner;
+			packageProductDependencies = (
+				FB0C96D52731A9C4007B490A /* Neutron */,
+			);
 			productName = NeutronBanner;
 			productReference = FB577FF827307AFC000B1938 /* NeutronBanner.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = FB577FEF27307AFC000B1938;
+			packageReferences = (
+				FB0C96D42731A9C4007B490A /* XCRemoteSwiftPackageReference "neutron-swift" */,
+			);
 			productRefGroup = FB577FF927307AFC000B1938 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB57800A2730844B000B1938 /* NeutronBannerModifier.swift in Sources */,
 				FB577FFE27307AFC000B1938 /* ContentView.swift in Sources */,
+				FB57800C273087A8000B1938 /* ViewExtension.swift in Sources */,
 				FB577FFC27307AFC000B1938 /* NeutronBannerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB0C96D42731A9C4007B490A /* XCRemoteSwiftPackageReference "neutron-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hca-ecoe/neutron-swift";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB0C96D52731A9C4007B490A /* Neutron */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB0C96D42731A9C4007B490A /* XCRemoteSwiftPackageReference "neutron-swift" */;
+			productName = Neutron;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB577FF027307AFC000B1938 /* Project object */;
 }
